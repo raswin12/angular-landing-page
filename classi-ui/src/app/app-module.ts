@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { Dashboard } from './dashboard/dashboard';
 import { routes } from './app.routes';
 import { LandingPage } from './landing-page/landing-page';
-
+import { NgApexchartsModule } from 'ng-apexcharts';
 @NgModule({
   declarations: [
     App,
@@ -18,6 +18,7 @@ import { LandingPage } from './landing-page/landing-page';
   ],
   imports: [
     BrowserModule,
+    NgApexchartsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
