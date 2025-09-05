@@ -6,18 +6,20 @@ import { Footer } from './footer/footer';
 import { RouterModule } from '@angular/router';
 import { Dashboard } from './dashboard/dashboard';
 import { routes } from './app.routes';
-import { LandingPage } from './landing-page/landing-page';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { ProductList } from './product-list/product-list';
+import { MaterialModule } from './shared/material-modules/materials.module';
 @NgModule({
   declarations: [
     App,
     NavBar,
     Footer,
     Dashboard,
-    LandingPage
+    ProductList,
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     NgApexchartsModule,
     RouterModule.forRoot(routes)
   ],

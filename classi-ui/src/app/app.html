@@ -1,3 +1,30 @@
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="app-container">
+    <app-nav-bar></app-nav-bar>
+    <div class="page-container">
+        <!-- Sidebar -->
+        <aside>
+            <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+            </a>
+            <a routerLink="/product-list" routerLinkActive="active">
+                <i class="fa fa-arrows" aria-hidden="true"></i> Product List
+            </a>
+            <a routerLink="/notifications" routerLinkActive="active">
+                <i class="fa fa-bell-o" aria-hidden="true"></i> Notification
+            </a>
+            <a routerLink="/tracker" routerLinkActive="active">
+                <i class="fa fa-dot-circle-o" aria-hidden="true"></i> Target Tracker
+            </a>
+            <a routerLink="/profile" routerLinkActive="active">
+                <i class="fa fa-user-o" aria-hidden="true"></i> Profile
+            </a>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+
+    <app-footer></app-footer>
+</div>
